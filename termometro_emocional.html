@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Termómetro Emocional</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f7fa;
+    text-align:center;
+    padding:40px;
+}
+
+h1{
+    color:#003366;
+}
+
+.termometro{
+    width:200px;
+    margin:auto;
+    border-radius:20px;
+    overflow:hidden;
+    border:3px solid #ccc;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.nivel{
+    padding:20px;
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.rojo{
+    background:#e53935;
+}
+
+.naranja{
+    background:#fb8c00;
+}
+
+.amarillo{
+    background:#fdd835;
+    color:black;
+}
+
+.verde{
+    background:#43a047;
+}
+
+.azul{
+    background:#1e88e5;
+}
+
+.mensaje{
+    margin-top:30px;
+    font-size:22px;
+    font-weight:bold;
+    color:#003366;
+}
+
+button{
+    margin:8px;
+    padding:12px 20px;
+    font-size:16px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>UNIVERSIDAD DE EL SALVADOR</h1>
+<h2>Dossier Psico Motiva Challenge</h2>
+
+<div class="termometro">
+
+<div class="nivel rojo">😡 Muy Molesto</div>
+<div class="nivel naranja">😟 Preocupado</div>
+<div class="nivel amarillo">😐 Neutral</div>
+<div class="nivel verde">😊 Tranquilo</div>
+<div class="nivel azul">😁 Muy Feliz</div>
+
+</div>
+
+<div class="mensaje" id="mensaje">
+¿Cómo te sientes hoy?
+</div>
+
+<br>
+
+<button onclick="cambiar('😡 Muy Molesto')">😡</button>
+<button onclick="cambiar('😟 Preocupado')">😟</button>
+<button onclick="cambiar('😐 Neutral')">😐</button>
+<button onclick="cambiar('😊 Tranquilo')">😊</button>
+<button onclick="cambiar('😁 Muy Feliz')">😁</button>
+
+<script>
+
+function cambiar(emocion){
+    document.getElementById("mensaje").innerHTML =
+    "Emoción seleccionada: " + emocion;
+}
+
+</script>
+
+</body>
+</html>
